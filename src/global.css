@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(223, 223, 223);
+  display: flex;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.subcontainer {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 160px;
+  background-color: rgba(4, 102, 116, 0.596);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.subcontainer h1 {
+  color: aliceblue;
+  margin: 10px 0;
+}
+
+.subcontainer .btn {
+  padding: 5px 19px;
+  font-size: 1rem;
+  background-color: rgb(34, 32, 34);
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.cpf__container {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.349);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  border-radius: 20px;
+  gap: 5px;
+}
+
+.cpf__container input {
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+}
+
+.cpf__container input:focus {
+  outline: none;
+  font-size: 1rem;
+}

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { cpf1 } from "./GeraCpf";
+
+import "./global.css";
 
 function App() {
+  const [cpf, setCpf] = useState("");
+  const [copied, setCopied] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="subcontainer">
+        <h1>Gerador de cpf</h1>
+        <div className="cpf__container">
+          <input type="text" value={cpf} />
+          <button
+            className="btn"
+            onClick={() => {
+              navigator.clipboard.writeText(cpf);
+
+              setCopied(true);
+            }}
+          >
+            {copied ? "copiado !" : "copiar"}
+          </button>
+        </div>
+        <button
+          className="btn"
+          onClick={() => {
+            setCpf(cpf1.geraNovoCpf());
+            setCopied(false);
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Gerar CPF
+        </button>
+      </div>
     </div>
   );
 }
