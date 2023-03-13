@@ -2,12 +2,8 @@ import ValidaCpf from "./ValidaCpf";
 
 class GeraCpf {
   rand(min = 100000000, max = 999999999) {
-    let digito = String(Math.floor(Math.random() * (min - max) + min));
-    if (digito < 0) {
-      let converted = String(Math.abs(digito));
-      return converted;
-    }
-
+    let digito = String(Math.floor(Math.random() * (max - min) + min));
+    
     return digito;
   }
 
